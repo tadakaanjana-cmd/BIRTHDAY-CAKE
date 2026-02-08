@@ -21,6 +21,21 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        position: relative; /* NEW */
+      }
+      
+      .cake {
+        background: #ffffff;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 35px;
+        width: 10px;
+        transform: translate(-50%, -300px);
+        backface-visibility: hidden;
+        animation: in 500ms 6s ease-out forwards;
+        z-index: 10; /* NEW — brings candle above cake */
       }
 
       .name{
@@ -120,21 +135,21 @@
         color: #8b6a60;
         font-family: 'Lato', sans-serif;
         font-weight: 300;
-        font-style:italic;
+        font-style: italic;
         text-align: center;
         margin-top: 1rem;
       }
       
-      .text h1
+      .text h1 {
         font-size: clamp(1.2rem, 4vw, 1.6rem);
         font-weight: 600;
-      }  
+      }
       
       .name {
         font-size: clamp(1rem, 3.5vw, 1.2rem);
-        
-        }
+        font-weight: 600;
       }
+      
     </style>
   </head>
   <body>
